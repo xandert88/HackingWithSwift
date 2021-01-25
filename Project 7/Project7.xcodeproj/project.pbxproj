@@ -14,6 +14,8 @@
 		FA22D77C25BC27CC00912C29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA22D77B25BC27CC00912C29 /* Assets.xcassets */; };
 		FA22D77F25BC27CC00912C29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA22D77D25BC27CC00912C29 /* LaunchScreen.storyboard */; };
 		FA22D78825BC34BF00912C29 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22D78725BC34BF00912C29 /* Petition.swift */; };
+		FA22D78B25BE30D800912C29 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22D78A25BE30D800912C29 /* Petitions.swift */; };
+		FA22D78E25BE3BC600912C29 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA22D78D25BE3BC600912C29 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FA22D77E25BC27CC00912C29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA22D78025BC27CC00912C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA22D78725BC34BF00912C29 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
+		FA22D78A25BE30D800912C29 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		FA22D78D25BE3BC600912C29 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 				FA22D77225BC27C900912C29 /* AppDelegate.swift */,
 				FA22D77425BC27C900912C29 /* SceneDelegate.swift */,
 				FA22D77625BC27C900912C29 /* ViewController.swift */,
+				FA22D78D25BE3BC600912C29 /* DetailViewController.swift */,
 				FA22D78725BC34BF00912C29 /* Petition.swift */,
+				FA22D78A25BE30D800912C29 /* Petitions.swift */,
 				FA22D77825BC27C900912C29 /* Main.storyboard */,
 				FA22D77B25BC27CC00912C29 /* Assets.xcassets */,
 				FA22D77D25BC27CC00912C29 /* LaunchScreen.storyboard */,
@@ -143,7 +149,9 @@
 				FA22D77725BC27C900912C29 /* ViewController.swift in Sources */,
 				FA22D78825BC34BF00912C29 /* Petition.swift in Sources */,
 				FA22D77325BC27C900912C29 /* AppDelegate.swift in Sources */,
+				FA22D78E25BE3BC600912C29 /* DetailViewController.swift in Sources */,
 				FA22D77525BC27C900912C29 /* SceneDelegate.swift in Sources */,
+				FA22D78B25BE30D800912C29 /* Petitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
