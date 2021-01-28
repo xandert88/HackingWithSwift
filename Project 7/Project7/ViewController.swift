@@ -10,16 +10,23 @@ import UIKit
 class ViewController: UITableViewController {
     
     var petitions = [Petition]()
+    var filteredPetitions = [Petition]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(creditAlert))
+       let filterButton = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterPressed))
+        let clearButton = UIBarButtonItem(title: "Clear Filter", style: .plain, target: self, action: #selector(clearFilter))
+        navigationItem.leftBarButtonItems = [filterButton, clearButton]
+        
+       parseData()
+    }
+    // created this func to call again when clearing filtered data
+    func parseData() {
+        
         let urlString: String
-        
-        
-        
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         } else {
@@ -33,7 +40,13 @@ class ViewController: UITableViewController {
             }
             showError()
     }
-        
+    }
+    
+    
+    @objc func clearFilter() {
+        petitions = [Petition]()
+        parseData()
+        tableView.reloadData()
     }
     
     @objc func creditAlert() {
@@ -42,6 +55,29 @@ class ViewController: UITableViewController {
         present(ac, animated: true)
     }
     
+    func search(_ searchItem: String) {
+        filteredPetitions.removeAll(keepingCapacity: true)
+       
+        for i in petitions {
+            if i.title.lowercased().contains(searchItem) {
+                filteredPetitions.append(i)
+                petitions = filteredPetitions
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    @objc func filterPressed() {
+        let ac = UIAlertController(title: "Filter Petitions", message: "Enter a keyword to search through petitions", preferredStyle: .alert)
+        ac.addTextField()
+        ac.addAction(UIAlertAction(title: "Search", style: .default, handler: { [weak self, weak ac] action in
+            guard let result = ac?.textFields?[0].text else { return }
+            self?.search(result)
+        }))
+        
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(ac, animated: true)
+    }
     func parse(json: Data) {
         let decoder = JSONDecoder()
         
