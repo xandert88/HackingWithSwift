@@ -53,11 +53,8 @@
                             <constraint firstItem="H7s-04-qvI" firstAttribute="top" secondItem="HxN-ie-a8K" secondAttribute="bottom" constant="30" id="txe-26-I93"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yNQ-sH-3my">
-                        <barButtonItem key="leftBarButtonItem" id="hRP-wr-iLE"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="yNQ-sH-3my"/>
                     <connections>
-                        <outlet property="barLabel" destination="hRP-wr-iLE" id="15i-DE-gIv"/>
                         <outlet property="button1" destination="HxN-ie-a8K" id="ODx-l3-zF3"/>
                         <outlet property="button2" destination="H7s-04-qvI" id="oTN-YG-aVF"/>
                         <outlet property="button3" destination="V3O-fK-XHZ" id="N4u-eH-6hI"/>

@@ -12,16 +12,19 @@ class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
-    @IBOutlet var barLabel: UIBarButtonItem!
+
     
     var countries = [String]()
     var correctAnswer = 0
     var score = 0
     var questionsAsked = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Score: \(score)", style: .plain, target: self, action: nil)
         
         button1.layer.borderWidth = 1
         button2.layer.borderWidth = 1
@@ -40,7 +43,6 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         correctAnswer = Int.random(in: 0...2)
         title = countries[correctAnswer].uppercased()
-        barLabel.title = "Score: \(score)"
         
     }
     
@@ -71,7 +73,6 @@ class ViewController: UIViewController {
             questionsAsked = 0
         }
     }
-    
 
 }
 
